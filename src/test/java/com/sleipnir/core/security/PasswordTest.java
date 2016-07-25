@@ -4,9 +4,9 @@ public class PasswordTest
 {
 
     public static void main(String[] args) {
-//        basicTests();
-//        truncatedHashTest();
-//        testHashFunctionChecking();
+        basicTests();
+        truncatedHashTest();
+        testHashFunctionChecking();
     }
 
     // Make sure truncated hashes don't validate.
