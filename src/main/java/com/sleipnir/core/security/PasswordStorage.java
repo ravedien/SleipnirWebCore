@@ -34,7 +34,7 @@ public class PasswordStorage
 
     // These constants may be changed without breaking existing hashes.
     public static final int SALT_BYTE_SIZE = 24;
-    public static final int HASH_BYTE_SIZE = 18;
+    public static final int HASH_BYTE_SIZE = 72;
     public static final int PBKDF2_ITERATIONS = 1200;
 
     // These constants define the encoding and may not be changed.

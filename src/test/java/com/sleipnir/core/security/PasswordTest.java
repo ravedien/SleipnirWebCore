@@ -4,8 +4,8 @@ public class PasswordTest
 {
 
     public static void main(String[] args) {
-        basicTests();
-        truncatedHashTest();
+//        basicTests();
+//        truncatedHashTest();
         testHashFunctionChecking();
     }
 
@@ -100,7 +100,7 @@ public class PasswordTest
     {
         try {
             String hash = PasswordStorage.createHash("foobar");
-            hash = hash.replaceFirst("sha1:", "sha256:");
+//            hash = hash.replaceFirst("sha1:", "sha256:");
 
             boolean raised = false;
             try {
