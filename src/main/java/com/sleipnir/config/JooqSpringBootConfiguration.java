@@ -15,11 +15,16 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.TransactionAwareDataSourceProxy;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.sleipnir.exception.ExceptionTranslator;
 
 @Configuration
 public class JooqSpringBootConfiguration {
+	
+	private static final int passwordStrength = 15;
+	
 	@Bean
     public DataSourceTransactionManager transactionManager(DataSource dataSource) {
         return new DataSourceTransactionManager(dataSource);
@@ -59,5 +64,10 @@ public class JooqSpringBootConfiguration {
                 .derive(transactionProvider) //
                 .derive(executeListenerProvider) //
                 .derive(SQLDialect.POSTGRES);
+    }
+    
+    @Bean
+    public PasswordEncoder passwordEncoder(){
+    	return new BCryptPasswordEncoder(passwordStrength);
     }
 }
