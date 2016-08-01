@@ -7,6 +7,12 @@ public class Account extends BaseEntity<Long>{
 	private String password;
 	private String enabled;
 	
+	public Account(Account value) {
+		this.id = value.id;
+		this.password = value.password;
+		this.enabled = value.enabled;
+	}
+	
 	public Account(String username, String password, String enabled) {
 		this.username = username;
 		this.password = password;
@@ -36,5 +42,14 @@ public class Account extends BaseEntity<Long>{
 	public void setEnabled(String enabled) {
 		this.enabled = enabled;
 	}
-
+	
+	@Override
+	public String toString() {
+		StringBuilder sb = new StringBuilder("MAccount (");
+		sb.append(id);
+		sb.append(", ").append(password);
+		sb.append(", ").append(enabled);
+		sb.append(")");
+		return sb.toString();
+	}
 }

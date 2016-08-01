@@ -8,7 +8,7 @@ import org.modelmapper.jooq.RecordValueReader;
 public abstract class EntityProviderFactory<T, TRECORD extends org.jooq.impl.UpdatableRecordImpl<TRECORD>, TTABLE extends org.jooq.impl.TableImpl<TRECORD>>
 		implements DomainFactory<T, TRECORD> {
 	
-	protected ModelMapper modelMapper;
+	  protected ModelMapper modelMapper;
 	  private DSLContext jooq;
 	  
 	  private TTABLE table;
