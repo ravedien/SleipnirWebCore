@@ -13,5 +13,7 @@ public class AccountFactory extends EntityProviderFactory<Long, MAccountRecord, 
 		super(modelMapper, jooq, classTable);
 		// TODO Auto-generated constructor stub
 	}
+	
+	
 
 }

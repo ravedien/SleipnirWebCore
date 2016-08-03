@@ -9,7 +9,7 @@ import org.jooq.generated.tables.records.MAccountRecord;
 import com.sleipnir.core.BasicGatewayImpl;
 
 public class AccountGateway extends BasicGatewayImpl<Long, MAccountRecord>{
-
+	
 	@Override
 	public Record retrieve(Long key) {
 		// TODO Auto-generated method stub
