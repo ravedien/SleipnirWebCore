@@ -11,9 +11,5 @@ public class AccountFactory extends EntityProviderFactory<Long, MAccountRecord, 
 
 	public AccountFactory(ModelMapper modelMapper, DSLContext jooq, Class<TableImpl<MAccountRecord>> classTable) {
 		super(modelMapper, jooq, classTable);
-		// TODO Auto-generated constructor stub
 	}
-	
-	
-
 }

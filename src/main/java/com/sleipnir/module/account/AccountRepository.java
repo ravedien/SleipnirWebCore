@@ -5,6 +5,7 @@ import java.util.List;
 import org.jooq.Condition;
 import org.jooq.generated.tables.records.MAccountRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.sleipnir.core.DomainFactory;
 import com.sleipnir.core.DomainGateway;
@@ -40,10 +41,11 @@ public class AccountRepository implements UpdateableRepository<Account, Long>{
 		return null;
 	}
 
+	@Transactional
 	@Override
 	public Account add(Account entity) {
-		// TODO Auto-generated method stub
-		return null;
+		MAccountRecord newAccount = accountGateway.persist(accountFactory.createRecord(entity));
+		return accountFactory.make(newAccount, Account.class);
 	}
 
 	@Override
