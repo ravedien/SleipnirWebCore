@@ -5,9 +5,11 @@ import java.util.List;
 import org.jooq.Condition;
 import org.jooq.Record;
 import org.jooq.generated.tables.records.MAccountRecord;
+import org.springframework.stereotype.Component;
 
 import com.sleipnir.core.BasicGatewayImpl;
 
+@Component
 public class AccountGateway extends BasicGatewayImpl<Long, MAccountRecord>{
 	
 	@Override

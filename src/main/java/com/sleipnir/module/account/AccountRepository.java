@@ -5,12 +5,14 @@ import java.util.List;
 import org.jooq.Condition;
 import org.jooq.generated.tables.records.MAccountRecord;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.sleipnir.core.DomainFactory;
 import com.sleipnir.core.DomainGateway;
 import com.sleipnir.core.UpdateableRepository;
 
+@Repository
 public class AccountRepository implements UpdateableRepository<Account, Long>{
 
 	private final DomainGateway<Long, MAccountRecord>accountGateway;
